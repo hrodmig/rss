@@ -1,0 +1,82 @@
+stations:
+  - name: Вести FM
+    id: 1
+    website: https://smotrim.ru/channel/199
+    podcasts:
+      - title: Железная логика
+        description: 'Аргументы, с которыми невозможно спорить. Факты, которые расставят все на свои места. Безотказный механизм мышления. Снимаем розовые очки и расстаемся с иллюзиями в программе "Железная логика" с Сергеем Михеевым.'
+        brand_id: 61016
+        category: News
+        sub_category: Politics
+        website: https://smotrim.ru/brand/61016
+        feed: docs/61016.xml
+        image: https://raw.githubusercontent.com/hrodmig/rss/refs/heads/main/docs/images/61016.jpg
+
+      - title: Формула смысла
+        description: 'Мир сошел с ума? Возможно. Но даже самым безумным событиям и явлениям найдется разумное объяснение. Смысл есть, его не может не быть. Новое прочтение знакомых сюжетов. Трактовки. Интерпретации. Толкования. Что происходит и как это понимать?! Утреннее шоу "Формула смысла" с Дмитрием Куликовым.'
+        brand_id: 61007
+        category: News
+        sub_category: Politics
+        website: https://smotrim.ru/brand/61007
+        feed: docs/61007.xml
+        image: https://raw.githubusercontent.com/hrodmig/rss/refs/heads/main/docs/images/61007.jpg
+
+      - title: Американские горки
+        description: 'Как быть если: вы уверены, что всё зависит только от вас; вам кажется, что вы самые умные; всё обязано идти по вашему плану; вы всегда должны быть правы; у вас огромное эго, и вы – страна. США: что бывает, когда пытаешься контролировать весь мир. Политическая жизнь Штатов – внутри и за пределами. "Американские горки" с Дмитрием Дробницким. Приготовьтесь, будет трясти!'
+        brand_id: 63263
+        category: News
+        sub_category: Politics
+        website: https://smotrim.ru/brand/63263
+        feed: docs/63263.xml
+        image: https://raw.githubusercontent.com/hrodmig/rss/refs/heads/main/docs/images/63263.jpg
+
+      - title: Штатный корреспондент
+        description: "Наблюдаем за политической жизнью США. Валентин Богданов про Америку из Америки."
+        brand_id: 66024
+        category: News
+        sub_category: Politics
+        website: https://smotrim.ru/brand/66024
+        feed: docs/66024.xml
+        image: https://raw.githubusercontent.com/hrodmig/rss/refs/heads/main/docs/images/66024.jpg
+
+  - name: Радио Маяк
+    id: 2
+    website: https://smotrim.ru/channel/81
+    podcasts:
+      - title: Физики и лирики
+        description: "Александр Пушной и Рита Митрофанова разбираются в том, как устроен мир — от больших открытий и технологий до маленьких странностей нашей повседневной жизни. Здесь физики объясняют, почему всё работает именно так, а лирики напоминают, зачем нам вообще во всём этом разбираться."
+        brand_id: 62250
+        category: Society & Culture
+        website: https://smotrim.ru/brand/62250
+        feed: docs/62250.xml
+        image: https://raw.githubusercontent.com/hrodmig/rss/refs/heads/main/docs/images/62250.png
+
+      - title: Сергей Стиллавин и его друзья
+        description: "Неукротимая бригада Сергея Стиллавина обсуждает со слушателями актуальные события, тестирует автомобили, разоблачает бренды, пытается понять психологию мужчин и женщин, и делает ещё много чего увлекательного!"
+        brand_id: 58219
+        category: Society & Culture
+        website: https://smotrim.ru/brand/58219
+        feed: docs/58219.xml
+        image: https://raw.githubusercontent.com/hrodmig/rss/refs/heads/main/docs/images/58219.png
+
+  - name: Соловьёв Live
+    id: 3
+    website: https://smotrim.ru/channel/292
+    podcasts:
+      - title: Соловьёв Live
+        description: "В прямом эфире – новости и размышления, прямые включения корреспондентов, обсуждение повестки с признанными экспертами из разных областей."
+        brand_id: 66924
+        category: News
+        sub_category: Politics
+        website: https://smotrim.ru/brand/66924
+        feed: docs/66924.xml
+        image: https://raw.githubusercontent.com/hrodmig/rss/refs/heads/main/docs/images/66924.jpg
+
+      - title: Полный контакт
+        description: "Авторская политическая программа журналиста, радио- и телеведущего Владимира Соловьева. Программа выходит каждые вторник, среду и четверг с 7:00 до 11:00 утра."
+        brand_id: 60948
+        category: News
+        sub_category: Politics
+        website: https://smotrim.ru/brand/60948
+        feed: docs/60948.xml
+        image: https://raw.githubusercontent.com/hrodmig/rss/refs/heads/main/docs/images/60948.jpg
