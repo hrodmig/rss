@@ -1,63 +1,65 @@
 name: Deploy RSS feeds to Pages
 
 on:
-  # Runs on pushes targeting the default branch
-  workflow_dispatch: # Allows to run workflow manually from the Actions tab
+  schedule:
+    - cron: '0 3 * * *'          # каждый день в 3:00 UTC (можно изменить)
+  workflow_dispatch:             # можно запускать вручную
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write               # важно! для коммитов
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    env:
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+    
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      # start create RSS
-      - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/checkout@v4
         with:
-          python-version: "3.13"
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install python dependencies
-        run: |
-          sudo apt update
-          sudo apt install -y python3-pip
-          pip install -r requirements.txt
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-      - name: Install and configure locale
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y locales
           sudo locale-gen ru_RU.UTF-8
           sudo update-locale LANG=ru_RU.UTF-8
+          pip install -r requirements.txt
 
-      - name: Run RSS update script
+      - name: Run RSS generator
         run: python main.py
-      # end create RSS
+
+      - name: Commit updated feeds
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          if git diff --quiet docs/; then
+            echo "No changes to commit"
+          else
+            git add docs/
+            git commit -m "Update RSS feeds (automated)"
+            git push
+            echo "Changes committed and pushed"
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: "./docs"
 
       - name: Deploy to GitHub Pages
