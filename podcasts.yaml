@@ -57,7 +57,7 @@ stations:
         category: Society & Culture
         website: https://smotrim.ru/brand/58219
         feed: docs/58219.xml
-        image: https://raw.githubusercontent.com/hrodmig/rss/main/docs/images/58219.png
+        image: https://raw.githubusercontent.com/hrodmig/rss/main/docs/images/58219.jpg
 
   - name: Соловьёв Live
     id: 3
