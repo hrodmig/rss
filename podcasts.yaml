@@ -49,7 +49,7 @@ stations:
         category: Society & Culture
         website: https://smotrim.ru/brand/62250
         feed: docs/62250.xml
-        image: https://raw.githubusercontent.com/hrodmig/rss/main/docs/images/62250.png
+        image: https://raw.githubusercontent.com/hrodmig/rss/main/docs/images/62250.jpg
 
       - title: Сергей Стиллавин и его друзья
         description: "Неукротимая бригада Сергея Стиллавина обсуждает со слушателями актуальные события, тестирует автомобили, разоблачает бренды, пытается понять психологию мужчин и женщин, и делает ещё много чего увлекательного!"
